@@ -8,6 +8,7 @@ import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -38,9 +39,16 @@ public class CustomDialog2 extends AppCompatEditText{
         final EditText message = (EditText) dlg.findViewById(R.id.mesgase);
         final Button okButton = (Button) dlg.findViewById(R.id.okButton);
         final Button cancelButton = (Button) dlg.findViewById(R.id.cancelButton);
+        final PinView pinView = (PinView) dlg.findViewById(R.id.pinView);
 
         //((PinView) findViewById(R.id.pinView)).setAnimationEnable(true);
         //((PinView) findViewById(R.id.pinView)).setPasswordHidden(true);
+
+        pinView.setFocusable(true);
+        pinView.setFocusableInTouchMode(true);
+
+        pinView.setAnimationEnable(true);
+        pinView.setPasswordHidden(true);
 
         okButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity {
         LayoutInflater inflater = this.getLayoutInflater();
         View dialogView = inflater.inflate(R.layout.custom_dialog2, null);
 
-        ((PinView) dialogView.findViewById(R.id.pinView)).setAnimationEnable(true);
-        ((PinView) dialogView.findViewById(R.id.pinView)).setPasswordHidden(true);
+        //((PinView) dialogView.findViewById(R.id.pinView)).setAnimationEnable(true);
+        //((PinView) dialogView.findViewById(R.id.pinView)).setPasswordHidden(true);
 
         final TextView main_label = (TextView) findViewById(R.id.main_label) ;
         button.setOnClickListener(new View.OnClickListener() {
@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 CustomDialog2 customDialog = new CustomDialog2(MainActivity.this);
                 customDialog.callFunction(main_label);
-
 
             }
         });
